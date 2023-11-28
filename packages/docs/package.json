@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@kidohka-ui/react": "*",
+    "@kidohka-ui/tokens": "*"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.3",
