@@ -111,7 +111,15 @@ var { styled, css, globalCss, keyframes, getCssText, theme, createTheme, config 
   }
 });
 
-// src/index.tsx
+// src/components/Box.tsx
+var Box = styled("div", {
+  padding: "$4",
+  borderRadius: "$md",
+  backgroundColor: "$gray800",
+  border: "1px solid $gray600"
+});
+
+// src/components/Button.tsx
 var Button = styled("button", {
   fontFamily: "$default",
   backgroundColor: "$ignite300",
@@ -137,5 +145,6 @@ var Button = styled("button", {
   }
 });
 export {
+  Box,
   Button
 };
