@@ -11,10 +11,11 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "@kidohka-ui/react": "*",
-    "@kidohka-ui/tokens": "*"
+    "@kidohka-ui/tokens": "*",
+    "polished": "^4.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.3",
