@@ -211,7 +211,8 @@ type BoxProps = ComponentProps<typeof Box>;
 
 type ButtonProps = ComponentProps<typeof Button>;
 declare const Button: _stitches_react_types_styled_component.StyledComponent<"button", {
-    size?: "big" | "small" | undefined;
+    variant?: "primary" | "secondary" | "tertiary" | undefined;
+    size?: "sm" | "md" | undefined;
 }, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
         white: string;

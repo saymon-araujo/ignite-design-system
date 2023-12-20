@@ -1,4 +1,5 @@
 import { StoryObj, Meta } from "@storybook/react";
+import { ArrowRight } from "@phosphor-icons/react";
 import { Button, ButtonProps } from "@kidohka-ui/react";
 
 export default {
@@ -6,14 +7,46 @@ export default {
   component: Button,
 
   args: {
-    children: "Enviar",
+    children: "Send",
   },
 } as Meta;
 
 export const Primary: StoryObj<ButtonProps> = {};
 
-export const Big: StoryObj<ButtonProps> = {
+export const Secondary: StoryObj<ButtonProps> = {
   args: {
-    size: "big",
+    variant: "secondary",
+  },
+};
+
+export const Tertiary: StoryObj<ButtonProps> = {
+  args: {
+    variant: "tertiary",
+    children: "Cancel",
+  },
+};
+
+export const Small: StoryObj<ButtonProps> = {
+  args: {
+    size: "sm",
+    children: "Small",
+  },
+};
+
+export const WithIcon: StoryObj<ButtonProps> = {
+  args: {
+    children: (
+      <>
+        Próximo Passo
+        <ArrowRight weight="bold" />
+      </>
+    ),
+  },
+};
+
+export const Disabled: StoryObj<ButtonProps> = {
+  args: {
+    children: "Disabled",
+    disabled: true,
   },
 };
