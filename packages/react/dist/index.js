@@ -62,8 +62,10 @@ __export(src_exports, {
   Avatar: () => Avatar2,
   Box: () => Box,
   Button: () => Button,
+  CheckBox: () => CheckBox,
   Heading: () => Heading,
   Text: () => Text,
+  TextArea: () => TextArea,
   TextInput: () => TextInput
 });
 module.exports = __toCommonJS(src_exports);
@@ -386,12 +388,91 @@ function TextInput(_a) {
     /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Input, __spreadValues({}, props))
   ] });
 }
+
+// src/components/TextArea.tsx
+var TextArea = styled("textarea", {
+  backgroundColor: "$gray900",
+  padding: "$3 $4",
+  borderRadius: "$sm",
+  boxSizing: "border-box",
+  border: "2px solid $gray900",
+  display: "flex",
+  alignItems: "baseline",
+  fontFamily: "$default",
+  fontSize: "$sm",
+  color: "$white",
+  fontWeight: "$regular",
+  resize: "vertical",
+  minHeight: 80,
+  "&:focus": {
+    outline: 0,
+    borderColor: "$ignite300"
+  },
+  "&:disabled": {
+    opacity: 0.5,
+    cursor: "not-allowed"
+  },
+  "&:placeholder": {
+    color: "$gray400"
+  }
+});
+
+// src/components/CheckBox/index.tsx
+var import_react3 = require("@phosphor-icons/react");
+
+// src/components/CheckBox/styles.ts
+var Checkbox = __toESM(require("@radix-ui/react-checkbox"));
+var CheckContainer = styled(Checkbox.Root, {
+  all: "unset",
+  width: "$6",
+  height: "$6",
+  backgroundColor: "$gray900",
+  borderRadius: "$xs",
+  lineHeight: 0,
+  cursor: "pointer",
+  overflow: "hidden",
+  boxSizing: "border-box",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  border: "2px solid $gray900",
+  "&:focus": {
+    border: "2px solid $ignite300"
+  },
+  '&[data-state="checked"]': {
+    backgroundColor: "$ignite300",
+    border: "2px solid $ignite300"
+  },
+  "&:disabled": {
+    opacity: 0.5,
+    cursor: "not-allowed"
+  }
+});
+var CheckIndicator = styled(Checkbox.Indicator, {
+  color: "$white",
+  width: "$4",
+  height: "$4"
+  // '&[data-state="checked"]': {
+  //   animation: `${slideIn} 0.2s ease-out`,
+  // },
+  // '&[data-state="unchecked"]': {
+  //   animation: `${slideOut} 0.2s ease-out`,
+  // },
+});
+
+// src/components/CheckBox/index.tsx
+var import_jsx_runtime3 = require("react/jsx-runtime");
+var CheckBox = (props) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(CheckContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(CheckIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_react3.Check, { weight: "bold" }) }) }));
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
   Box,
   Button,
+  CheckBox,
   Heading,
   Text,
+  TextArea,
   TextInput
 });
