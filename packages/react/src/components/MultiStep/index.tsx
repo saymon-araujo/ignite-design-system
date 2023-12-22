@@ -20,3 +20,8 @@ export const MultiStep = ({ amountOfSteps, currentStep = 1 }: MultiStepProps) =>
     </MultiStepContainer>
   );
 };
+
+MultiStepContainer.displayName = "MultiStepContainer";
+Label.displayName = "Label";
+Steps.displayName = "Steps";
+Step.displayName = "Step";

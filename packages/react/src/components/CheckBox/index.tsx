@@ -13,3 +13,7 @@ export const CheckBox = (props: CheckBoxProps) => {
     </CheckContainer>
   );
 };
+
+CheckContainer.displayName = "CheckContainer";
+CheckIndicator.displayName = "CheckIndicator";
+Check.displayName = "CheckIcon";
