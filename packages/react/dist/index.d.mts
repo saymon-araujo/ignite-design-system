@@ -1654,4 +1654,10 @@ declare const CheckContainer: _stitches_react_types_styled_component.StyledCompo
 type CheckBoxProps = ComponentProps<typeof CheckContainer>;
 declare const CheckBox: (props: CheckBoxProps) => react_jsx_runtime.JSX.Element;
 
-export { Avatar, type AvatarProps, Box, type BoxProps, Button, type ButtonProps, CheckBox, type CheckBoxProps, Heading, type HeadingProps, Text, TextArea, type TextAreaProps, TextInput, type TextInputProps, type TextProps };
+interface MultiStepProps {
+    amountOfSteps: number;
+    currentStep?: number;
+}
+declare const MultiStep: ({ amountOfSteps, currentStep }: MultiStepProps) => react_jsx_runtime.JSX.Element;
+
+export { Avatar, type AvatarProps, Box, type BoxProps, Button, type ButtonProps, CheckBox, type CheckBoxProps, Heading, type HeadingProps, MultiStep, type MultiStepProps, Text, TextArea, type TextAreaProps, TextInput, type TextInputProps, type TextProps };

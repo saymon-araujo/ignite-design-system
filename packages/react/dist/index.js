@@ -64,6 +64,7 @@ __export(src_exports, {
   Button: () => Button,
   CheckBox: () => CheckBox,
   Heading: () => Heading,
+  MultiStep: () => MultiStep,
   Text: () => Text,
   TextArea: () => TextArea,
   TextInput: () => TextInput
@@ -465,6 +466,49 @@ var import_jsx_runtime3 = require("react/jsx-runtime");
 var CheckBox = (props) => {
   return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(CheckContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(CheckIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_react3.Check, { weight: "bold" }) }) }));
 };
+
+// src/components/MultiStep/styles.ts
+var MultiStepContainer = styled("div", {});
+var Label = styled(Text, {
+  color: "$gray200",
+  defaultVariants: {
+    size: "xs"
+  }
+});
+var Steps = styled("div", {
+  display: "grid",
+  gap: "$2",
+  marginTop: "$1",
+  gridTemplateColumns: "repeat(var(--steps-amount),1fr)"
+});
+var Step = styled("div", {
+  height: "$1",
+  borderRadius: "$px",
+  backgroundColor: "$gray600",
+  variants: {
+    active: {
+      true: {
+        backgroundColor: "$gray100"
+      }
+    }
+  }
+});
+
+// src/components/MultiStep/index.tsx
+var import_jsx_runtime4 = require("react/jsx-runtime");
+var MultiStep = ({ amountOfSteps, currentStep = 1 }) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(MultiStepContainer, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Label, { children: [
+      "Passo ",
+      currentStep,
+      " de ",
+      amountOfSteps
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Steps, { css: { "--steps-amount": amountOfSteps }, children: Array.from({ length: amountOfSteps }, (_, i) => i + 1).map((step) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Step, { active: step <= currentStep }, step);
+    }) })
+  ] });
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -472,6 +516,7 @@ var CheckBox = (props) => {
   Button,
   CheckBox,
   Heading,
+  MultiStep,
   Text,
   TextArea,
   TextInput

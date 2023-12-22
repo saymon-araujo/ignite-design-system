@@ -6,3 +6,4 @@ export * from "./components/Avatar";
 export * from "./components/TextInput";
 export * from "./components/TextArea";
 export * from "./components/CheckBox";
+export * from "./components/MultiStep";
