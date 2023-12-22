@@ -9,6 +9,13 @@ export default {
     src: "https://github.com/saymon-araujo.png",
     alt: "Saymon Araujo",
   },
+  argTypes: {
+    src: {
+      control: {
+        type: "text",
+      },
+    },
+  },
 } as Meta<AvatarProps>;
 
 export const Primary: StoryObj<AvatarProps> = {};
