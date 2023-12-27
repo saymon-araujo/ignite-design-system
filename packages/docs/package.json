@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "dev": "storybook dev -p 6006",
     "build": "storybook build",
-    "dev": "storybook dev -p 6006"
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
     "@kidohka-ui/react": "*",
@@ -23,6 +24,7 @@
     "@storybook/blocks": "^7.5.3",
     "@storybook/react": "^7.5.3",
     "@storybook/react-vite": "^7.5.3",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.2.2",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
