@@ -30,11 +30,20 @@ export const Primary: StoryObj<TextInputProps> = {
   },
 };
 
+export const Small: StoryObj<TextInputProps> = {
+  args: {
+    placeholder: "Placeholder",
+    size: "sm",
+  },
+};
+
 export const WithPrefix: StoryObj<TextInputProps> = {
   args: {
     prefix: "cal.com/",
+    placeholder: "your-placeholder",
   },
 };
+
 export const Disabled: StoryObj<TextInputProps> = {
   args: {
     disabled: true,
