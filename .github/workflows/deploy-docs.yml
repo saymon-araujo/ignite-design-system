@@ -22,7 +22,7 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          TURBO_TOKEN: e2BZY3JwoKWeJ7hj1yVNqQA7
+          TURBO_TOKEN: ${{ secrets.VERCEL_TURBO_TOKEN }}
           TURBO_TEAM: kidohka
 
       - name: Deploy Storybook 🚀
